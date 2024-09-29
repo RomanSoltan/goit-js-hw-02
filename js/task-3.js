@@ -1,29 +1,22 @@
-function checkForSpam(message) {
-  const wordSpam = "spam";
-  const wordSale = "sale";
-  const messageNormalize = message.toLowerCase();
-
-  if (
-    messageNormalize.includes(wordSpam) ||
-    messageNormalize.includes(wordSale)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 // function checkForSpam(message) {
-//   const wordSpam = "spam";
-//   const wordSale = "sale";
 //   const messageNormalize = message.toLowerCase();
 
-//   const messageCheck =
-//     messageNormalize.includes(wordSpam) || messageNormalize.includes(wordSale)
-//       ? true
-//       : false;
-//   return messageCheck;
+//   if (messageNormalize.includes("spam") || messageNormalize.includes("sale")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
 // }
+
+function checkForSpam(message) {
+  const messageNormalize = message.toLowerCase();
+
+  const messageCheck =
+    messageNormalize.includes("spam") || messageNormalize.includes("sale")
+      ? true
+      : false;
+  return messageCheck;
+}
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
